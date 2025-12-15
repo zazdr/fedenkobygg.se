@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://fedenkobygg.se/sitemap.xml

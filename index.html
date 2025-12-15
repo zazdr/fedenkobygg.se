@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- google analytics -->
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMVXPRY9CS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GMVXPRY9CS');
+        </script>
+
+    <!-- google analytics -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Fedenko Bygg är ett byggföretag verksamt i och nära Stockholm län.">
+    <meta name="keywords" content="fedenko bygg, fedenkobygg, byggbranschen, altan, bygga, inre renoveringar, fasad, tak">
+
+    <title>Fedenko Bygg</title>
+
+    <link rel="icon" href="https://i.postimg.cc/dty10Fxw/favicon.png" sizes="16x16">
+    <link rel="canonical" href="https://fedenkobygg.se">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ---------- default ---------- */
+
+            ::-webkit-scrollbar {
+                width: 0;
+            }
+
+            :root {
+                --while: #ffffff;
+                --grey: #eeeeee;
+                --black: #000000;
+
+                --font_size_title: 32px;
+                --font_size_text: 22px;
+
+                --font_weight_bold: 700;
+                --font_weight_semi_bold: 600;
+                --font_weight_medium: 500;
+
+                --padding: 10px;
+                --gap_small: 10px;
+                --gap_big: 50px;
+                --border: 1px;
+            }
+
+            body {
+                background-color: var(--grey);
+                margin: 0;
+                padding: 0;
+                font-family: 'Space Grotesk', sans-serif;
+            }
+
+            .box {
+                max-width: 1280px;
+                padding: 0 10px;
+                margin: 0 auto;
+            }
+
+            .lazyload-bg {
+                background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+            }
+
+            section {
+                margin: 50px 0;
+            }
+
+            @media (max-width: 1300px) {
+
+                :root {
+                    --font_size_title: 25px;
+                    --gap_big: 10px;
+                }
+
+                section {
+                    margin: 10px 0;
+                }
+
+            }
+
+            /* ---------- font ---------- */
+
+                p, h1 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    font-style: inherit;
+                    color: inherit;
+                    text-align: inherit;
+                }
+
+                * {
+                    color: var(--black);
+                }
+
+            /* ---------- font ---------- */
+
+        /* ---------- default ---------- */
+
+        /* -------------------- section -------------------- */
+
+           /* ---------- header ---------- */
+
+                header {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 50px;
+                }
+
+                header svg {
+                    height: 100%;
+                }
+
+                @media (max-width: 1300px) {
+
+                    header {
+                        padding: 10px 10px 0 10px;
+                    }
+
+                }
+
+            /* ---------- header ---------- */
+
+            /* ---------- omoss ---------- */
+
+                /* .omoss */
+
+                .omoss_title {
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;  
+
+                    padding: var(--padding);
+
+                    font-weight: var(--font_weight_bold);
+                    font-size: var(--font_size_text);
+                    text-align: center;
+                    background-color: var(--while);
+                }
+
+            /* ---------- omoss ---------- */
+
+            /* ---------- tjenster ---------- */
+
+                /* .tjenster */
+
+                .tjenster_wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--gap_big);
+                }
+
+                .tjenster_item {
+                    max-width: 615px;
+                    width: 100%;
+                    height: min-content;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    background-color: var(--while);
+                }
+
+                @media (max-width: 1300px) {
+
+                    .tjenster_item {
+                        max-width: 100%;
+                    }
+                }
+
+                /* ---------- more ---------- */
+
+                    .tjenster_more {
+                        max-width: 100%;
+                    }
+
+                    .tjenster_more_title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        border-top: var(--border) solid var(--black);
+                        box-sizing: border-box;
+
+                        cursor: pointer;
+                        transition: all .55s ease;
+
+                        padding: var(--padding);
+
+                        font-weight: var(--font_weight_bold);
+                        font-size: var(--font_size_text);
+                        
+                        background-color: #e9e9e9;
+                    }
+
+                    .tjenster_more_open > .tjenster_more_title { 
+                        color: var(--while);
+                        background-color: var(--black);
+                    }
+
+                    .tjenster_more_expand {
+                        transition: all .5s ease;
+
+                        font-weight: var(--font_weight_medium);
+                        font-size: 23px;
+                        line-height: 0;
+                    }
+
+                    .tjenster_more_open > .tjenster_more_title .tjenster_more_expand { 
+                        transform: rotate(-225deg); 
+                        color: var(--while);
+                    }
+
+                    .tjenster_more_content {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height .5s ease;
+                    }
+
+                    .tjenster_more_open > .tjenster_more_content { 
+                        max-height: 10000px;
+                    }
+
+                /* ---------- more ---------- */
+
+                /* ---------- text ---------- */
+
+                    .tjenster_title_img {
+                        width: 100%;
+                        height: 380px;
+                    }
+
+                    @media (max-width: 1300px) {
+
+                        .tjenster_title_img {
+                            height: 300px;
+                        }
+                    }
+
+                    .tjenster_title {
+                        border: var(--border) solid var(--black);
+                        box-sizing: border-box;  
+                        border-right: none;
+                        border-left: none;
+
+                        padding: var(--padding);
+                        line-height: 1;
+
+                        font-weight: var(--font_weight_bold);
+                        font-size: var(--font_size_title);
+                    }
+
+                    .tjenster_service,
+                    .tjenster_more_text {
+                        padding: var(--padding);
+                    }
+
+                    .tjenster_service p {
+                        font-weight: var(--font_weight_medium);
+                    }
+
+                    .tjenster_more_text p {
+                        font-weight: var(--font_weight_medium);
+                    }
+
+                    .tjenster_service p,
+                    .tjenster_more_text p {
+                        margin-bottom: var(--padding);
+                        font-size: var(--font_size_text);
+                    }
+
+                    .tjenster_service p:last-child, 
+                    .tjenster_more_text p:last-child {
+                        margin: 0;
+                    }
+
+                /* ---------- text ---------- */
+
+                /* ---------- img ---------- */
+
+                    /* .tjenster_more_projekt */
+
+                    .tjenster_more_projekt_service {
+                        border-top: var(--border) solid var(--black);
+                        box-sizing: border-box;
+
+                        padding: var(--padding);
+
+                        font-weight: var(--font_weight_bold);
+                        font-size: var(--font_size_text);
+                    }
+
+                    .tjenster_more_projekt_item {
+                        display: flex;
+                        flex-wrap: wrap;     
+                        gap: var(--gap_small);
+
+                        padding: var(--padding);
+                    }
+
+                    .tjenster_more_projekt_item div {
+                        height: 500px;
+                        width: 100%;
+
+                        border: var(--border) solid var(--black);
+                        box-sizing: border-box;  
+                    }
+
+                    @media (max-width: 600px) {
+
+                        .tjenster_more_projekt_item div {
+                            height: 350px;
+                        }
+
+                    }
+
+                /* ---------- img ---------- */
+
+            /* ---------- tjenster ---------- */
+
+            /* ---------- kontakt ---------- */
+
+                /* .kontakt */
+
+                /* .kontakt_wrap */
+
+                .kontakt_title {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-bottom: none;
+
+                    padding: var(--padding);
+                    line-height: 1;
+
+                    font-weight: var(--font_weight_bold);
+                    font-size: var(--font_size_title);
+                    letter-spacing: 1px;
+                    background-color: var(--while);
+                }
+
+                #form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: var(--while);
+                }
+
+                input, 
+                textarea {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-bottom: none;
+                    outline: none;
+                    border-radius: 0;
+
+                    background: rgba(0, 0, 0, 0);
+
+                    padding: var(--padding);
+
+                    font-family: 'Space Grotesk';
+                    font-weight: var(--font_weight_medium);
+                    font-size: var(--font_size_text);
+                }
+
+                textarea {
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 250px;
+                }
+
+                #form_button {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    outline: none;
+
+                    padding: var(--padding);
+
+                    cursor: pointer;
+                    transition: all 250ms ease-in-out;
+
+                    font-weight: var(--font_weight_semi_bold);
+                    font-size: var(--font_size_text);
+
+                    background-color: #e9e9e9;
+                }
+
+                @media (max-width: 1300px) {
+
+                    #form_button {
+                        font-weight: var(--font_weight_medium);
+                    }
+                }
+
+                #form_button:hover { 
+                    color: var(--while); 
+                    background-color: var(--black);
+                }
+
+                #form_status:empty {
+                    display: none;
+                }
+
+                #form_status {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-top: none;
+
+                    padding: var(--padding);
+
+                    font-weight: var(--font_weight_medium);
+                    font-size: var(--font_size_text);
+                    text-align: center;
+                }
+
+            /* ---------- kontakt ---------- */
+
+            /* ---------- footer ---------- */
+
+                /* footer */
+
+                .footer_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    padding-bottom: var(--gap_big);
+                }
+
+                .footer_wrap a {
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    background-color: var(--while);
+
+                    padding: var(--padding);
+
+                    font-family: 'Space Grotesk';
+                    font-weight: var(--font_weight_bold);
+                    font-size: var(--font_size_text);
+                    text-decoration: none;
+
+                    flex-grow: 1;
+                }
+
+                @media (min-width: 1300px) {
+
+                    .footer_wrap a {
+                        border-right: 0;
+                        text-align: center;
+                    }
+
+                    .footer_wrap a:last-child { 
+                        border-right: var(--border) solid var(--black); 
+                    }
+                }
+
+                @media (max-width: 1300px) {
+
+                    .footer_wrap a {
+                        width: 100%;
+                        border-bottom: 0;
+                    }
+
+                    .footer_wrap a:last-child { 
+                        border-bottom: var(--border) solid var(--black); 
+                    }
+                }
+
+            /* ---------- footer ---------- */
+
+        /* -------------------- section -------------------- */
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ---------- header ---------- -->
+
+        <header>
+            <svg width="411" height="197" viewBox="0 0 411 197" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.485 178.675H25.605V184.525H10.485V178.675ZM11.025 196H3.735V164.5H27.54V170.35H11.025V196ZM42.1502 177.19H57.3152V182.86H42.1502V177.19ZM42.6902 190.15H59.8352V196H35.4452V164.5H59.2502V170.35H42.6902V190.15ZM68.6057 196V164.5H82.9157C86.3357 164.5 89.3507 165.16 91.9607 166.48C94.5707 167.77 96.6107 169.585 98.0807 171.925C99.5507 174.265 100.286 177.04 100.286 180.25C100.286 183.43 99.5507 186.205 98.0807 188.575C96.6107 190.915 94.5707 192.745 91.9607 194.065C89.3507 195.355 86.3357 196 82.9157 196H68.6057ZM75.8957 190.015H82.5557C84.6557 190.015 86.4707 189.625 88.0007 188.845C89.5607 188.035 90.7607 186.895 91.6007 185.425C92.4707 183.955 92.9057 182.23 92.9057 180.25C92.9057 178.24 92.4707 176.515 91.6007 175.075C90.7607 173.605 89.5607 172.48 88.0007 171.7C86.4707 170.89 84.6557 170.485 82.5557 170.485H75.8957V190.015ZM115.458 177.19H130.623V182.86H115.458V177.19ZM115.998 190.15H133.143V196H108.753V164.5H132.558V170.35H115.998V190.15ZM141.914 196V164.5H147.944L166.529 187.18H163.604V164.5H170.804V196H164.819L146.189 173.32H149.114V196H141.914ZM187.752 188.8L187.347 180.385L202.422 164.5H210.522L196.932 179.125L192.882 183.445L187.752 188.8ZM181.227 196V164.5H188.472V196H181.227ZM202.782 196L191.577 182.275L196.347 177.1L211.287 196H202.782ZM231.665 196.54C229.175 196.54 226.865 196.135 224.735 195.325C222.635 194.515 220.805 193.375 219.245 191.905C217.715 190.435 216.515 188.71 215.645 186.73C214.805 184.75 214.385 182.59 214.385 180.25C214.385 177.91 214.805 175.75 215.645 173.77C216.515 171.79 217.73 170.065 219.29 168.595C220.85 167.125 222.68 165.985 224.78 165.175C226.88 164.365 229.16 163.96 231.62 163.96C234.11 163.96 236.39 164.365 238.46 165.175C240.56 165.985 242.375 167.125 243.905 168.595C245.465 170.065 246.68 171.79 247.55 173.77C248.42 175.72 248.855 177.88 248.855 180.25C248.855 182.59 248.42 184.765 247.55 186.775C246.68 188.755 245.465 190.48 243.905 191.95C242.375 193.39 240.56 194.515 238.46 195.325C236.39 196.135 234.125 196.54 231.665 196.54ZM231.62 190.33C233.03 190.33 234.32 190.09 235.49 189.61C236.69 189.13 237.74 188.44 238.64 187.54C239.54 186.64 240.23 185.575 240.71 184.345C241.22 183.115 241.475 181.75 241.475 180.25C241.475 178.75 241.22 177.385 240.71 176.155C240.23 174.925 239.54 173.86 238.64 172.96C237.77 172.06 236.735 171.37 235.535 170.89C234.335 170.41 233.03 170.17 231.62 170.17C230.21 170.17 228.905 170.41 227.705 170.89C226.535 171.37 225.5 172.06 224.6 172.96C223.7 173.86 222.995 174.925 222.485 176.155C222.005 177.385 221.765 178.75 221.765 180.25C221.765 181.72 222.005 183.085 222.485 184.345C222.995 185.575 223.685 186.64 224.555 187.54C225.455 188.44 226.505 189.13 227.705 189.61C228.905 190.09 230.21 190.33 231.62 190.33ZM273.017 196V164.5H288.407C292.367 164.5 295.337 165.25 297.317 166.75C299.327 168.25 300.332 170.23 300.332 172.69C300.332 174.34 299.927 175.78 299.117 177.01C298.307 178.21 297.197 179.14 295.787 179.8C294.377 180.46 292.757 180.79 290.927 180.79L291.782 178.945C293.762 178.945 295.517 179.275 297.047 179.935C298.577 180.565 299.762 181.51 300.602 182.77C301.472 184.03 301.907 185.575 301.907 187.405C301.907 190.105 300.842 192.22 298.712 193.75C296.582 195.25 293.447 196 289.307 196H273.017ZM280.262 190.51H288.767C290.657 190.51 292.082 190.21 293.042 189.61C294.032 188.98 294.527 187.99 294.527 186.64C294.527 185.32 294.032 184.345 293.042 183.715C292.082 183.055 290.657 182.725 288.767 182.725H279.722V177.415H287.507C289.277 177.415 290.627 177.115 291.557 176.515C292.517 175.885 292.997 174.94 292.997 173.68C292.997 172.45 292.517 171.535 291.557 170.935C290.627 170.305 289.277 169.99 287.507 169.99H280.262V190.51ZM317.567 196V183.13L319.232 187.54L305.372 164.5H313.112L323.732 182.185H319.277L329.942 164.5H337.097L323.237 187.54L324.857 183.13V196H317.567ZM356.965 196.54C354.475 196.54 352.18 196.15 350.08 195.37C348.01 194.56 346.195 193.42 344.635 191.95C343.105 190.48 341.905 188.755 341.035 186.775C340.195 184.795 339.775 182.62 339.775 180.25C339.775 177.88 340.195 175.705 341.035 173.725C341.905 171.745 343.12 170.02 344.68 168.55C346.24 167.08 348.07 165.955 350.17 165.175C352.27 164.365 354.58 163.96 357.1 163.96C359.89 163.96 362.395 164.425 364.615 165.355C366.865 166.285 368.755 167.635 370.285 169.405L365.605 173.725C364.465 172.525 363.22 171.64 361.87 171.07C360.52 170.47 359.05 170.17 357.46 170.17C355.93 170.17 354.535 170.41 353.275 170.89C352.015 171.37 350.92 172.06 349.99 172.96C349.09 173.86 348.385 174.925 347.875 176.155C347.395 177.385 347.155 178.75 347.155 180.25C347.155 181.72 347.395 183.07 347.875 184.3C348.385 185.53 349.09 186.61 349.99 187.54C350.92 188.44 352 189.13 353.23 189.61C354.49 190.09 355.87 190.33 357.37 190.33C358.81 190.33 360.205 190.105 361.555 189.655C362.935 189.175 364.27 188.38 365.56 187.27L369.7 192.535C367.99 193.825 365.995 194.815 363.715 195.505C361.465 196.195 359.215 196.54 356.965 196.54ZM363.04 191.59V179.755H369.7V192.535L363.04 191.59ZM394.652 196.54C392.162 196.54 389.867 196.15 387.767 195.37C385.697 194.56 383.882 193.42 382.322 191.95C380.792 190.48 379.592 188.755 378.722 186.775C377.882 184.795 377.462 182.62 377.462 180.25C377.462 177.88 377.882 175.705 378.722 173.725C379.592 171.745 380.807 170.02 382.367 168.55C383.927 167.08 385.757 165.955 387.857 165.175C389.957 164.365 392.267 163.96 394.787 163.96C397.577 163.96 400.082 164.425 402.302 165.355C404.552 166.285 406.442 167.635 407.972 169.405L403.292 173.725C402.152 172.525 400.907 171.64 399.557 171.07C398.207 170.47 396.737 170.17 395.147 170.17C393.617 170.17 392.222 170.41 390.962 170.89C389.702 171.37 388.607 172.06 387.677 172.96C386.777 173.86 386.072 174.925 385.562 176.155C385.082 177.385 384.842 178.75 384.842 180.25C384.842 181.72 385.082 183.07 385.562 184.3C386.072 185.53 386.777 186.61 387.677 187.54C388.607 188.44 389.687 189.13 390.917 189.61C392.177 190.09 393.557 190.33 395.057 190.33C396.497 190.33 397.892 190.105 399.242 189.655C400.622 189.175 401.957 188.38 403.247 187.27L407.387 192.535C405.677 193.825 403.682 194.815 401.402 195.505C399.152 196.195 396.902 196.54 394.652 196.54ZM400.727 191.59V179.755H407.387V192.535L400.727 191.59Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M192 22.5V26V45H216V26C215.72 22.0807 218.567 18.632 222.468 18.1639L228 17.5C237.93 17.169 247.845 18.5036 257.334 21.4485L257.5 21.5L267.987 25.4328C268.285 25.5444 268.513 25.1575 268.271 24.9512L260.816 18.5872C252.981 11.8981 244.211 6.38741 234.786 2.22891C232.949 1.41854 230.963 1 228.955 1H212.5H197.223C196.156 1 195.169 1.56673 194.632 2.48839L192.289 6.50387C192.11 6.81109 191.781 7 191.426 7H180.351C179.476 7 178.628 6.70241 177.945 6.15617L177.648 5.91853C176.922 5.33796 176.5 4.44432 176.5 3.51497C176.5 2.57069 176.055 1.66656 175.3 1.1C174.781 0.710534 174.149 0.5 173.5 0.5H161.48C160.525 0.5 159.602 0.841569 158.877 1.46297L157.897 2.30271C157.01 3.06264 156.5 4.17204 156.5 5.33974V24.1603C156.5 25.328 157.01 26.4374 157.897 27.1973L158.877 28.037C159.602 28.6584 160.525 29 161.48 29H173.5C174.149 29 174.781 28.7895 175.3 28.4C176.055 27.8334 176.5 26.9443 176.5 26V25.5858C176.5 24.5704 176.903 23.5967 177.621 22.8787L177.828 22.6716C178.579 21.9214 179.596 21.5 180.657 21.5H191C191.552 21.5 192 21.9477 192 22.5ZM192.25 53C192.112 53 192 53.1119 192 53.25V83.75C192 83.8881 192.112 84 192.25 84H215.75C215.888 84 216 83.8881 216 83.75V53.25C216 53.1119 215.888 53 215.75 53H192.25Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M123.381 76.0001L123.381 76L123.381 76.0001L123.383 76.0001L123.382 76.0014L181 154H125L75 86L20 154H4L67.381 76L67.4058 76.0337L67.3867 76.0001L123.381 76.0001Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M321.5 46.0005L234.5 46L148 154H182L239.5 82L297 154H321H343.494L315.524 119.089C315.179 118.658 315.249 118.028 315.68 117.683L321.143 113.306L311.764 101.6L310.513 100.039C310.168 99.6078 310.238 98.9785 310.669 98.6332L312.229 97.3827L330.96 82.3769L317.83 65.9878L311.62 70.963C311.608 70.9719 311.597 70.9806 311.586 70.989L317.839 78.7941C318.184 79.2251 318.115 79.8544 317.684 80.1997L278.662 111.462C278.231 111.807 277.602 111.738 277.256 111.307L261.625 91.7959C261.28 91.3649 261.349 90.7356 261.78 90.3903L300.802 59.1281C301.233 58.7828 301.862 58.8523 302.208 59.2833L309.086 67.8687C309.097 67.8594 309.107 67.8502 309.119 67.8413L317.67 60.9904C317.802 60.8843 317.953 60.8174 318.109 60.788C318.397 60.7338 318.702 60.808 318.934 61.001C318.985 61.0435 319.033 61.0917 319.076 61.1456L334.707 80.6563L335.957 82.2172C336.303 82.6482 336.233 83.2775 335.802 83.6229L334.241 84.8733L315.511 99.8792L324.264 110.805L329.727 106.428C330.158 106.083 330.788 106.153 331.133 106.584L369.121 154H408L321.501 46.0005L321.5 46L321.5 46.0005Z" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M178.582 129H180L210.394 91.6223L173.745 42L173.708 42.0454L173.742 42.0001L122.75 41.9999L122.814 42.0937L122.745 42L86.5864 86.4667L91.5385 93.1717L123.5 53L171.067 118.825L178.582 129Z" fill="black"/>
+                <rect x="225" y="138" width="12" height="12" fill="black"/>
+                <rect x="242" y="138" width="12" height="12" fill="black"/>
+                <rect x="242" y="121" width="12" height="12" fill="black"/>
+                <rect x="225" y="121" width="12" height="12" fill="black"/>
+                <rect x="59" y="138" width="12" height="12" fill="black"/>
+                <rect x="76" y="138" width="12" height="12" fill="black"/>
+                <rect x="76" y="121" width="12" height="12" fill="black"/>
+                <rect x="59" y="121" width="12" height="12" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M66 2C66 1.44771 66.4477 1 67 1H71.75C71.8881 1 72 1.11193 72 1.25V19.5032C72 19.6413 72.1119 19.7532 72.25 19.7532H73.75C73.8881 19.7532 74 19.6413 74 19.5032V1.25C74 1.11193 74.1119 1 74.25 1H82.75C82.8881 1 83 1.11193 83 1.25V12.5942C83 12.7322 83.1119 12.8442 83.25 12.8442H84.75C84.8881 12.8442 85 12.7322 85 12.5942V1.25C85 1.11193 85.1119 1 85.25 1H95.75C95.8881 1 96 1.11193 96 1.25V19.5032C96 19.6413 96.1119 19.7532 96.25 19.7532H97.75C97.8881 19.7532 98 19.6413 98 19.5032V1.25C98 1.11193 98.1119 1 98.25 1H100C100.552 1 101 1.44772 101 2V33.5584C101 34.1107 100.552 34.5584 100 34.5584H67C66.4477 34.5584 66 34.1107 66 33.5584V2ZM95.5 38.013H98.4912C98.6988 38.013 98.816 38.2514 98.6891 38.4157L91.0521 48.3091C91.0183 48.3529 91 48.4066 91 48.4619V53.3117V60.9578C91 61.0958 90.8881 61.2078 90.75 61.2078H77.25C77.1119 61.2078 77 61.0958 77 60.9578V53.3117V48.3766L77 48.3765L68.3595 38.4269C68.2189 38.2651 68.3339 38.013 68.5482 38.013H71H95.5ZM77 68.3669C77 68.2288 77.1119 68.1169 77.25 68.1169H90.75C90.8881 68.1169 91 68.2288 91 68.3669V76.75C91 76.8881 90.8881 77 90.75 77H77.25C77.1119 77 77 76.8881 77 76.75V68.3669Z" fill="black"/>
+            </svg>
+        </header>
+
+    <!-- ---------- header ---------- -->
+
+    <!-- ---------- omoss ---------- -->
+
+        <section class="omoss">
+            <div class="box">
+                <h1 class="omoss_title"><b>Fedenko Bygg</b> - din pålitliga partner inom byggbranschen. Vi specialiserar oss på fasader, inre renoveringar, tak, altaner och byggarbeten. Vårt team består av fantastiska medarbetare med stor erfarenhet och kunskap. Vi arbetar i Stockholms län men kan också ta oss an projekt över hela Sverige.</h1>
+            </div>
+        </section>
+
+    <!-- ---------- omoss ---------- -->
+
+    <!-- ---------- tjenster ---------- -->
+
+        <section class="tjenster">
+            <div class="box">
+                <div class="tjenster_wrap">
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img lazyload-bg" data-bg="https://i.postimg.cc/ZnLdsStX/fasad-2-7.webp"></div>
+                            <h1 class="tjenster_title">FASAD</h1>
+                            <div class="tjenster_service">
+                                <p>Isolering</p>
+                                <p>Målning</p>
+                                <p>Byte</p>
+                                <p>Marksten</p>
+                                <p>Arbete av alla svårighetsgrader</p>
+                                <p>Träprodukter</p>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>Projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Yq36b1tN/fasad-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/7ZZgcfLf/fasad-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/DwwqD8zq/fasad-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qvv8Yz73/fasad-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Z55rgCqM/fasad-1-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/522wG6tP/fasad-1-6.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/FzvSxKqx/fasad-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9029BfSq/fasad-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Bb3FCvyF/fasad-2-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9029BfSy/fasad-2-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/nr1DSJbd/fasad-2-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qqG3DTVY/fasad-2-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/ZnLdsStX/fasad-2-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/tJzxvjQc/fasad-2-8.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/PfbY5mpp/fasad-2-9.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/PfbY5mpv/fasad-2-10.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Isolering</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/P5Jwy96y/fasad-isolering-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/4xy9Pq8B/fasad-isolering-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/FHzLp8PT/fasad-isolering-1-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Marksten</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/1tGn4Qtn/fasad-marksten-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/763Gbk6C/fasad-marksten-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/FRyd14RL/fasad-marksten-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/TwVLh6wp/fasad-marksten-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Ss62jhsL/fasad-marksten-1-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Rhv3HD63/fasad-marksten-1-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/6qB7vm2r/fasad-marksten-1-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/4yXK9S7v/fasad-marksten-1-8.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Y0t4WsGz/fasad-marksten-1-9.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/cCdKnbgX/fasad-marksten-1-10.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/2yCqZKbH/fasad-marksten-1-11.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Träprodukter</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/d0dDSYGg/fasad-traprodukter-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/PqZNFj19/fasad-traprodukter-1-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/RCGhYGJY/fasad-traprodukter-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/c1TCzTt2/fasad-traprodukter-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/SQVRPVY5/fasad-traprodukter-2-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/k5rgSpLW/fasad-traprodukter-3-1.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img lazyload-bg" data-bg="https://i.postimg.cc/wjDdCTbM/inre_renovering_2_18.webp"></div>
+                            <h1 class="tjenster_title">INRE RENOVERING</h1>
+                            <div class="tjenster_service">
+                                <p>Köksrenovering</p>
+                                <p>Badrumsrenovering</p>
+                                <p>Gipsarbete</p>
+                                <p>Golvvärme</p>
+                                <p>Kakelläggning</p>
+                                <p>Målning</p>
+                                <p>Spackling</p>
+                                <p>Fönstren</p>
+                                <p>Möbel</p>
+                            </div>
+            
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>Projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/V6f1BQg6/inre-renovering-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/XJj3cSLp/inre-renovering-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/76HDM89P/inre-renovering-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/tTqytQkC/inre-renovering-1-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/02MvCCY0/inre-renovering-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Hscmttw2/inre-renovering-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/gkXpKKVV/inre-renovering-2-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/5NYJmmB5/inre-renovering-2-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/kX6CyyQw/inre-renovering-2-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9FR2BBdg/inre-renovering-2-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/SN24GG6P/inre-renovering-2-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/BQL3CCTk/inre-renovering-2-8.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/bNDPRRxM/inre-renovering-2-9.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/yYMHpSjG/inre-renovering-2-10.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/zXsr2R79/inre-renovering-2-11.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/5NhVKFgs/inre-renovering-2-12.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/L6cpQZD7/inre-renovering-2-13.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rFBkZtgL/inre-renovering-2-14.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/yYMHpSn6/inre-renovering-2-15.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/yYMHpSns/inre-renovering-2-16.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/hPkBZ7MS/inre-renovering-2-17.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/wjDdCTbM/inre-renovering-2-18.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/x1LSwTF1/inre-renovering-2-19.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/C59W2WGz/inre-renovering-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/vTCpKprB/inre-renovering-3-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Köksrenovering</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/TPyNzkPQ/inre-renovering-koksrenovering-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/TPyNzkPj/inre-renovering-koksrenovering-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9f4g6xfp/inre-renovering-koksrenovering-1-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/wvLfv7Lw/inre-renovering-koksrenovering-2-1.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Badrumsrenovering</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/DZMDWtYt/inre-renovering-badrumsrenovering-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/G25NBZS6/inre-renovering-badrumsrenovering-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rmPbdvPX/inre-renovering-badrumsrenovering-1-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/PfLf6hhD/inre-renovering-badrumsrenovering-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rydyhcc1/inre-renovering-badrumsrenovering-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/dQ7QWvvd/inre-renovering-badrumsrenovering-2-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/BZ8Zhssx/inre-renovering-badrumsrenovering-2-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/59Z4TGNv/inre-renovering-badrumsrenovering-2-5.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Golvvärme</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/R0FxNQZQ/inre-renovering-golvvarme-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/256NVFSh/inre-renovering-golvvarme-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/ZqRzCF5r/inre-renovering-golvvarme-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/VN6PdBkF/inre-renovering-golvvarme-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/s2XCv9gK/inre-renovering-golvvarme-1-5.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Kakelläggning</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Zqg2nGQM/inre-renovering-kakellaggning-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/s28qxkL4/inre-renovering-kakellaggning-1-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/J032TGh7/inre-renovering-kakellaggning-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/5y5RP6t6/inre-renovering-kakellaggning-2-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/X78PdGhx/inre-renovering-kakellaggning-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/BQgzHLym/inre-renovering-kakellaggning-3-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Fönstren</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9Q2WF79J/inre-renovering-fonstren-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/L8SH61Px/inre-renovering-fonstren-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/fRswT9dP/inre-renovering-fonstren-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/6pK95vZH/inre-renovering-fonstren-1-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/C1R06C32/inre-renovering-fonstren-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/7654Q1Fp/inre-renovering-fonstren-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/G24RSJ01/inre-renovering-fonstren-2-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/G24RSPWW/inre-renovering-fonstren-2-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Y9v7yfcj/inre-renovering-fonstren-2-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/cHvW5MqH/inre-renovering-fonstren-2-6.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/vHrsjZKd/inre-renovering-fonstren-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rFXTQrfV/inre-renovering-fonstren-3-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/HsDmBy6L/inre-renovering-fonstren-3-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/9F52J7LQ/inre-renovering-fonstren-3-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Fsy4qH6h/inre-renovering-fonstren-3-5.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Möbel</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/SNTrmW3W/inre-renovering-mobel-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/4NNPC8L8/inre-renovering-mobel-1-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Övrigt</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/JhJc3S04/inre-renovering-ovrigt-1-1.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qqm8MTbg/inre-renovering-ovrigt-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/MHsyKSP6/inre-renovering-ovrigt-2-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img lazyload-bg" data-bg="https://i.postimg.cc/vBYg1K6f/tak_takarbete_med_takpannor_1_2.webp"></div>
+                            <h1 class="tjenster_title">TAK</h1>
+                            <div class="tjenster_service">
+                                <p>Takarbete med takpannor</p>
+                                <p>Metalltak</p>
+                                <p>Lödning av taket</p>
+                                <p>Skivtäckning</p>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>Projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+
+                                        <h1 class="tjenster_more_projekt_service">Takarbete med takpannor</h1>
+                                        
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/sXjQBLZG/tak-takarbete-med-takpannor-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/vBYg1K6f/tak-takarbete-med-takpannor-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/k4J6VHtS/tak-takarbete-med-takpannor-1-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/ydLJ0Tm8/tak-takarbete-med-takpannor-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rmfd591F/tak-takarbete-med-takpannor-2-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/90SrnFgt/tak-takarbete-med-takpannor-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rsbKPFZ1/tak-takarbete-med-takpannor-3-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Rh8NDVpg/tak-takarbete-med-takpannor-3-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Fzq7BsCx/tak-takarbete-med-takpannor-3-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/NFV5zfCP/tak-takarbete-med-takpannor-3-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/90SrnFgg/tak-takarbete-med-takpannor-3-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qqYz5MDm/tak-takarbete-med-takpannor-3-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/C5tzQLr2/tak-takarbete-med-takpannor-3-8.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img lazyload-bg" data-bg="https://i.postimg.cc/hvRvq31W/altan_3_2.webp"></div>
+                            <h1 class="tjenster_title">ALTAN</h1>
+                            <div class="tjenster_service">
+                                <p>Förråd</p>
+                                <p>Uterum</p>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>Projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qRzy7YKK/altan-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rmKxpb4c/altan-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rmKxpb4K/altan-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/SsJCK59n/altan-1-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/MTCMpGqz/altan-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/JnfDzhMr/altan-2-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/QCZCrnkR/altan-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/hvRvq31W/altan-3-2.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>4</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/jdK2gmjW/altan-4-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/15PXC2z8/altan-4-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/L6R5Cws1/altan-4-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/HsHnZRLM/altan-4-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/tCyJSwg3/altan-4-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/BQsbYkvc/altan-4-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/MKxHPNGd/altan-4-7.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>5</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/qvD777xG/altan-5-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/XY1vvvkc/altan-5-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/nhSLLLGR/altan-5-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Mp3GGGms/altan-5-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>6</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/mDCZVyfq/altan-6-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/W3gpSwcR/altan-6-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/760PXn8p/altan-6-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/cHw1TByp/altan-6-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Förråd</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/dVfqYxJ4/altan-forrad-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/VkhY8VzK/altan-forrad-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/L8WHpbmC/altan-forrad-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/vZKQsNGX/altan-forrad-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/GmfcC5cC/altan-forrad-1-5.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Uterum</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/xdHSSjx1/altan-uterum-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/CKDVVMPz/altan-uterum-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/bvbjjYCr/altan-uterum-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/MGR88ZPG/altan-uterum-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/KYLyycqn/altan-uterum-1-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/5tvMM975/altan-uterum-1-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/wvpYxKZR/altan-uterum-1-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/BvDGGZYg/altan-uterum-1-8.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/vBsw8Rk9/altan-uterum-1-9.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/W3vcpRCg/altan-uterum-1-10.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/85Sgk89w/altan-uterum-1-11.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/pTHMVN4q/altan-uterum-1-12.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Kz2hcXww/altan-uterum-1-13.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/nzJfV8gW/altan-uterum-1-14.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>2</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/0yMTp2qS/altan-uterum-2-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/cLgpQ4Nn/altan-uterum-2-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/28KpbLgF/altan-uterum-2-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/QxyL9KvJ/altan-uterum-2-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Z5BGrKhH/altan-uterum-2-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Sx2BWNpg/altan-uterum-2-6.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>3</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/j2317Bgc/altan-uterum-3-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/yx85W7P2/altan-uterum-3-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/L5QW1GCC/altan-uterum-3-3.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img lazyload-bg" data-bg="https://i.postimg.cc/J4w69cwg/bygga_1_4.webp"></div>
+                            <h1 class="tjenster_title">BYGGA</h1>
+                            <div class="tjenster_service">
+                                <p>Carport</p>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>Projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+                                        
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/Nf1JY9YD/bygga-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/PrG3BzG7/bygga-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/CLyPWHy9/bygga-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/J4w69cwg/bygga-1-4.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">Carport</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>1</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/bJDg5d36/bygga-carport-1-1.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/d1k6fD4x/bygga-carport-1-2.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/rm0jHzQY/bygga-carport-1-3.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/XJGLPXQs/bygga-carport-1-4.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/1tnBd4vh/bygga-carport-1-5.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/50YgrjsW/bygga-carport-1-6.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/KzkfW402/bygga-carport-1-7.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/HxczNj6m/bygga-carport-1-8.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/nzy2fZWf/bygga-carport-1-9.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/tTKkGycH/bygga-carport-1-10.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/0QTn1x49/bygga-carport-1-11.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/8524gDYP/bygga-carport-1-12.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/j5pcYK1N/bygga-carport-1-13.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/br1TzWXD/bygga-carport-1-14.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/5y83xTcj/bygga-carport-1-15.webp"></div>
+                                                    <div class="lazyload-bg" data-bg="https://i.postimg.cc/J0jq1vwX/bygga-carport-1-16.webp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <!-- ---------- tjenster ---------- -->
+
+    <!-- ---------- kontakt ---------- -->
+
+        <section class="kontakt">
+            <div class="box">
+                <div class="kontakt_wrap">
+                    <h1 class="kontakt_title">OFFERTFÖRFRÅGAN</h1>
+                    <form id="form" action="https://formspree.io/f/xdknkblj" method="POST">
+                        <input type="text" name="namn" placeholder="Namn">
+                        <input type="email" name="email" placeholder="E-post">
+                        <input type="text" name="telefon" placeholder="Telefonnummer">
+                        <input type="text" name="plats" placeholder="Plats">
+                        <input type="text" name="projekt" placeholder="Projekt">
+                        <textarea type="text" name="message" placeholder="Beskriv ditt projekt"></textarea>
+                        <button id="form_button" type="submit">Skicka</button>
+                        <p id="form_status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <!-- ---------- kontakt ---------- -->
+
+    <!-- ---------- footer ---------- -->
+
+        <footer>
+            <div class="box">
+                <div class="footer_wrap">
+                    <a href="mailto:info@fedenkobygg.se">info@fedenkobygg.se</a>
+                    <a href="tel:+46736323336">+46736323336</a>
+                    <a href="https://www.instagram.com/fedenkobygg/" target="_blank">instagram: fedenkobygg</a>
+                    <a href="https://www.facebook.com/fedenkobygg/" target="_blank">facebook: fedenkobygg</a>
+                    <a href="https://www.tiktok.com/@fedenkobygg/" target="_blank">tiktok: fedenkobygg</a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- ---------- footer ---------- -->
+
+    <script>
+
+        /* ---------- lazyload-bg ---------- */
+
+            document.addEventListener("DOMContentLoaded", function() {
+                let lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazyload-bg"));
+                
+                if ("IntersectionObserver" in window) {
+                    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                let lazyBackground = entry.target;
+                                lazyBackground.style.backgroundSize = 'cover';
+                                lazyBackground.style.backgroundPosition = 'center';
+                                lazyBackground.style.backgroundRepeat = 'no-repeat';
+                                lazyBackground.style.backgroundImage = 'url(' + lazyBackground.dataset.bg + ')';
+                                lazyBackgroundObserver.unobserve(lazyBackground);
+                            }
+                        });
+                    });
+
+                    lazyBackgrounds.forEach(function(lazyBackground) {
+                        lazyBackgroundObserver.observe(lazyBackground);
+                    });
+                } else {
+                    lazyBackgrounds.forEach(function(lazyBackground) {
+                        lazyBackground.style.backgroundSize = 'cover';
+                        lazyBackground.style.backgroundPosition = 'center';
+                        lazyBackground.style.backgroundRepeat = 'no-repeat';
+                        lazyBackground.style.backgroundImage = 'url(' + lazyBackground.dataset.bg + ')';
+                    });
+                }
+            });
+
+        /* ---------- lazyload-bg ---------- */
+
+        /* ---------- tjenster_more ---------- */
+
+            function smoothScrollTo(element, offset = -100, duration = 800) {
+                const targetPosition = element.getBoundingClientRect().top + window.scrollY + offset;
+                const startPosition = window.scrollY;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+                requestAnimationFrame(animation);
+            }
+
+            document.querySelectorAll('.tjenster_more_title').forEach((item) => {
+                item.addEventListener('click', () => {
+                    const parent = item.parentNode;
+                    const content = parent.querySelector('.tjenster_more_content');
+
+                    if (parent.classList.contains('tjenster_more_open')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        setTimeout(() => {
+                            content.style.maxHeight = '0';
+                        }, 10);
+                        parent.classList.remove('tjenster_more_open');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        parent.classList.add('tjenster_more_open');
+                        setTimeout(() => {
+                            content.style.maxHeight = 'none';
+                        }, 500);
+                        smoothScrollTo(parent, -49, 600);
+                    }
+                });
+            });
+
+        /* ---------- tjenster_more ---------- */
+
+        /* ---------- kontakt ---------- */
+
+            var form = document.getElementById("form");
+
+            async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("form_status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Tack för din ansökan!";
+                        form.reset()
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                status.innerHTML = "Kan inte skicka ett tomt formulär"
+                            } else {
+                                status.innerHTML = "Det uppstod ett problem när du skickade in ditt formulär"
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    status.innerHTML = "Det uppstod ett problem när du skickade in ditt formulär"
+                });
+            }
+
+            form.addEventListener("submit", handleSubmit)
+
+        /* ---------- kontakt ---------- */
+        
+    </script>
+
+</body>
+
+</html>
